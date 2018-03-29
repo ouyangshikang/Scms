@@ -21,6 +21,10 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'arrow-parens': 0,
+    'indent': [2, 4],
+    'semi': [2, "always"],
+    "space-before-function-paren": [0, "always"], //函数定义时括号前面要不要有空格
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
