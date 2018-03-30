@@ -43,6 +43,7 @@
 
         </div>
         <!-- footer -->
+        <footers></footers>
     </div>
 </template>
 
@@ -50,8 +51,15 @@
 import HeaderNav from '@/components/header';
 import Card from '@/components/card';
 import PannelModel from '@/components/pannel-model';
+import Footers from '@/components/footer';
 export default {
     name: 'Home',
+    components: {
+        HeaderNav,
+        Card,
+        PannelModel,
+        Footers
+    },
     data() {
         return {
             bannerImage: [{
@@ -182,11 +190,6 @@ export default {
             }]
         };
     },
-    components: {
-        HeaderNav,
-        Card,
-        PannelModel
-    },
     methods: {
 
     }
@@ -198,6 +201,7 @@ export default {
         .container {
             background: #edecf1;
             width: 100%;
+            padding-bottom: 60px;
             // height: 1900px;
             &-box {
                 position: relative;
