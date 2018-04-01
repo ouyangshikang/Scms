@@ -2,10 +2,10 @@
     <div class="footer">
         <div class="footer-con">
             <ul class="footer-lf">
-                <li v-for="item in subNav" :key="item">
+                <li v-for="item in subNav" :key="item.name">
                     <dl>
                         <dt>{{item.name}}</dt>
-                        <dd v-for="subItem in item.child" :key="subItem">
+                        <dd v-for="subItem in item.child" :key="subItem.name">
                             {{subItem.name}}
                         </dd>
                     </dl>

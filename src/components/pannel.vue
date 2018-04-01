@@ -1,6 +1,6 @@
 <template>
     <div class="pannel">
-        <div class="pannel-list" v-for="item in pannelList" :key="item">
+        <div class="pannel-list" v-for="item in pannelList" :key="item.title">
             <div class="pannel-header">
                 <span>{{item.subTitle}}</span>
                 <a href="#" v-if="item.isCase">更多</a>
@@ -8,7 +8,7 @@
             <div class="pannel-content">
                 <img :src="item.url" v-if="!item.styleImage">
                 <el-carousel trigger="click" height="338px" arrow="always" v-else>
-                    <el-carousel-item v-for="img in item.styleImage" :key="img">
+                    <el-carousel-item v-for="img in item.styleImage" :key="img.url">
                         <img :src="img.url">
                     </el-carousel-item>
                 </el-carousel>

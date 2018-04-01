@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <div class="card-list" v-for="card in cardList" :key="card">
+        <div class="card-list" v-for="card in cardList" :key="card.title">
             <img :src="card.url">
             <div class="card-info">
                 <p class="card-title">{{card.title}}</p>

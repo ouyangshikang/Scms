@@ -6,7 +6,7 @@
                 <!-- banner -->
                 <div class="banner">
                     <el-carousel trigger="click" height="420px" arrow="always">
-                        <el-carousel-item v-for="item in bannerImage" :key="item">
+                        <el-carousel-item v-for="item in bannerImage" :key="item.url">
                             <img :src="item.url">
                         </el-carousel-item>
                     </el-carousel>
@@ -16,7 +16,7 @@
                     <el-tabs value="first" type="border-card">
                         <el-tab-pane label="公告" name="first">
                             <ul>
-                                <li v-for="item in notice" :key="item" class="notice-list">
+                                <li v-for="item in notice" class="notice-list" :key="item.info">
                                     {{item.info}}
                                 </li>
                             </ul>
@@ -24,7 +24,7 @@
                         </el-tab-pane>
                         <el-tab-pane label="活动" name="second">
                             <ul>
-                                <li v-for="item in activity" :key="item" class="activity-list">
+                                <li v-for="item in activity" class="activity-list" :key="item.info">
                                     {{item.info}}
                                 </li>
                             </ul>
@@ -40,7 +40,7 @@
             <!-- 中联风采 -->
 
             <!-- 加盟案例 -->
-
+            <back-top></back-top>
         </div>
         <!-- footer -->
         <footers></footers>
@@ -52,13 +52,15 @@ import HeaderNav from '@/components/header';
 import Card from '@/components/card';
 import PannelModel from '@/components/pannel-model';
 import Footers from '@/components/footer';
+import BackTop from '@/components/back-top';
 export default {
     name: 'Home',
     components: {
         HeaderNav,
         Card,
         PannelModel,
-        Footers
+        Footers,
+        BackTop
     },
     data() {
         return {
@@ -245,6 +247,12 @@ export default {
                                     overflow: hidden;
                                     white-space: nowrap;
                                     text-overflow: ellipsis;
+                                    cursor: pointer;
+                                    &:hover {
+                                        color: #0079b7;
+                                        text-decoration: underline;
+                                    }
+
                                 }
                             }
                             .more {

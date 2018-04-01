@@ -1,6 +1,6 @@
 <template>
     <div class="pannel-model">
-        <div class="pannel-model-list" v-for="pannel in pannelList" :key="pannel">
+        <div class="pannel-model-list" v-for="pannel in pannelList" :key="pannel.title">
             <div class="pannel-model-list__header">
                 <span class="left-side"></span>
                 <img :src="pannel.iconUrl">
@@ -14,6 +14,7 @@
 
 <script>
 import Pannel from './pannel';
+
 export default {
     data() {
         return {

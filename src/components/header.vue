@@ -13,26 +13,26 @@
 
         <div class="nav">
             <ul class="nav-list">
-                <li class="nav-list__vertical">
+                <li class="nav-list__vertical" @mouseover="showNav" @mouseout="hideNav">
                     <i class="iconfont icon-tubiao113"></i>
                     <span>连锁运营体系</span>
-                    <ul class="nav-list__vertical-fixed">
-                        <li v-for="item in subNav" :key="item">
+                    <ul class="nav-list__vertical-fixed" v-show="showNavs">
+                        <li v-for="item in subNav" :key="item.name">
                             <span>{{item.name}}</span>
                             <i class="iconfont icon-arrow-right"></i>
                             <ul class="nav-list__vertical-hover">
-                                <li v-for="subItem in item.child" :key="subItem">
+                                <li v-for="subItem in item.child" :key="subItem.name">
                                     {{subItem.name}}
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li v-for="item in navArr" :key="item" class="nav-list__horizon">
+                <li v-for="item in navArr" class="nav-list__horizon" :key="item.name">
                     <span>{{item.name}}</span>
                     <i v-if="item.child" class="iconfont icon-arrow"></i>
                     <ul class="nav-list__horizon-hover">
-                        <li v-for="subItem in item.child" :key="subItem">
+                        <li v-for="subItem in item.child" :key="subItem.name">
                             {{subItem.name}}
                         </li>
                     </ul>
@@ -44,9 +44,16 @@
 
 <script>
 export default {
-    name: 'header',
+    name: 'header-nav',
+    props: {
+        isHome: {
+            type: Boolean,
+            default: true
+        }
+    },
     data() {
         return {
+            showNavs: true,
             navArr: [{
                 name: '首页'
             }, {
@@ -138,7 +145,19 @@ export default {
         };
     },
     methods: {
-
+        showNav() {
+            if (!this.isHome) {
+                this.showNavs = true;
+            }
+        },
+        hideNav() {
+            if (!this.isHome) {
+                this.showNavs = false;
+            }
+        }
+    },
+    mounted() {
+        this.showNavs = this.isHome;
     }
 };
 </script>
@@ -187,6 +206,9 @@ export default {
                 }
                 &__vertical {
                     background: #095688;
+                    // &:hover  .nav-list__vertical-fixed{
+                    //     display: block;
+                    // }
                     & > i {
                         font-size: 21px;
                         margin-right: 10px;
