@@ -122,7 +122,7 @@ export default {
                     route: '/ywkd/xxxc'
                 }, {
                     name: '联系我们',
-                    route: '/ywkd/lxwm'
+                    route: '/ywkd/contact'
                 }]
             }, {
                 name: '关于我们',

@@ -20,6 +20,10 @@ import xwdt from 'frontend/xwdt/index';
 import jmdt from 'frontend/xwdt/jmdt';
 import mtbd from 'frontend/xwdt/mtbd';
 import zbgg from 'frontend/xwdt/zbgg';
+// 要闻快递
+import ywkd from 'frontend/ywkd/index';
+import xxxc from 'frontend/ywkd/xxxc';
+import contact from 'frontend/ywkd/contact';
 Vue.use(Router);
 
 export default new Router({
@@ -43,7 +47,6 @@ export default new Router({
             path: '/zsjm',
             name: '招商加盟',
             component: zsjm,
-            redirect: '/zsjm/jmlc',
             children: [{
                 path: 'jmlc',
                 name: '加盟流程',
@@ -62,7 +65,6 @@ export default new Router({
             path: '/jmal',
             name: '加盟案例',
             component: jmal,
-            redirect: '/jmal/ddft',
             children: [{
                 path: '/jmal/ddft',
                 name: '店东访谈',
@@ -85,7 +87,6 @@ export default new Router({
             path: '/xwdt',
             name: '新闻动态',
             component: xwdt,
-            redirect: '/xwdt/zbgg',
             children: [{
                 path: '/xwdt/zbgg',
                 name: '总部公告',
@@ -98,6 +99,20 @@ export default new Router({
                 path: '/xwdt/jmdt',
                 name: '加盟动态',
                 component: jmdt
+            }]
+        },
+        {
+            path: '/ywkd',
+            name: '要闻快递',
+            component: ywkd,
+            children: [{
+                path: '/ywkd/xxxc',
+                name: '形象宣传',
+                component: xxxc
+            }, {
+                path: '/ywkd/contact',
+                name: '联系我们',
+                component: contact
             }]
         }
     ]
