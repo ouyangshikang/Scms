@@ -1,7 +1,7 @@
 # scms
 
 > an simple content management system for outsourcing
-
+#### 预览 http://123.207.42.232/#/
 
 ## Build Setup
 
