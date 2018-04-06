@@ -24,6 +24,12 @@ import zbgg from 'frontend/xwdt/zbgg';
 import ywkd from 'frontend/ywkd/index';
 import xxxc from 'frontend/ywkd/xxxc';
 import contact from 'frontend/ywkd/contact';
+// 关于我们
+import gywm from 'frontend/gywm/index';
+import gsjs from 'frontend/gywm/gsjs';
+import zytd from 'frontend/gywm/zytd';
+import zzry from 'frontend/gywm/zzry';
+import bghj from 'frontend/gywm/bghj';
 Vue.use(Router);
 
 export default new Router({
@@ -113,6 +119,28 @@ export default new Router({
                 path: '/ywkd/contact',
                 name: '联系我们',
                 component: contact
+            }]
+        },
+        {
+            path: '/gywm',
+            name: '关于我们',
+            component: gywm,
+            children: [{
+                path: '/gywm/gsjs',
+                name: '公司介绍',
+                component: gsjs
+            }, {
+                path: '/gywm/zytd',
+                name: '专业团队',
+                component: zytd
+            }, {
+                path: '/gywm/zzry',
+                name: '资质荣誉',
+                component: zzry
+            }, {
+                path: '/gywm/bghj',
+                name: '办公环境',
+                component: bghj
             }]
         }
     ]

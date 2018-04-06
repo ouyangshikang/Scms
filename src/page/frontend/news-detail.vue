@@ -112,6 +112,7 @@ export default {
                         margin: 19px auto 60px;
                     }
                     article {
+                        text-align: left;
                         font-size: 14px;
                         letter-spacing: .8px;
                         p {
