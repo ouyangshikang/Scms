@@ -17,22 +17,39 @@
                     <i class="iconfont icon-tubiao113"></i>
                     <span>连锁运营体系</span>
                     <ul class="nav-list__vertical-fixed" v-show="showNavs">
-                        <li v-for="item in subNav" :key="item.name">
+                        <li
+                            v-for="item in subNav"
+                            :key="item.name"
+                            @click="openRoute(item)"
+                        >
                             <span>{{item.name}}</span>
                             <i class="iconfont icon-arrow-right"></i>
                             <ul class="nav-list__vertical-hover">
-                                <li v-for="subItem in item.child" :key="subItem.name">
+                                <li
+                                    v-for="subItem in item.child"
+                                    :key="subItem.name"
+                                    @click.stop="openRoute(subItem)"
+                                >
                                     {{subItem.name}}
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li v-for="item in navArr" class="nav-list__horizon" :key="item.name">
+                <li
+                    v-for="item in navArr"
+                    class="nav-list__horizon"
+                    :key="item.name"
+                    @click="openRoute(item)"
+                >
                     <span>{{item.name}}</span>
                     <i v-if="item.child" class="iconfont icon-arrow"></i>
                     <ul class="nav-list__horizon-hover">
-                        <li v-for="subItem in item.child" :key="subItem.name">
+                        <li
+                            v-for="subItem in item.child"
+                            :key="subItem.name"
+                            @click.stop="openRoute(subItem)"
+                        >
                             {{subItem.name}}
                         </li>
                     </ul>
@@ -58,88 +75,125 @@ export default {
                 name: '首页'
             }, {
                 name: '招商加盟',
+                query: 'zslm',
                 child: [{
-                    name: '加盟政策'
+                    name: '加盟政策',
+                    query: 'jmzc'
                 }, {
-                    name: '盈利分析'
+                    name: '盈利分析',
+                    query: 'ylfx'
                 }, {
-                    name: '加盟流程'
+                    name: '加盟流程',
+                    query: 'jmlc'
                 }]
             }, {
                 name: '加盟案例',
+                query: 'jmal',
                 child: [{
-                    name: '店东访谈'
+                    name: '店东访谈',
+                    query: 'ddft'
                 }, {
-                    name: '运作实例'
+                    name: '运作实例',
+                    query: 'yzsl'
                 }, {
-                    name: '店面风采'
+                    name: '店面风采',
+                    query: 'dmfc'
                 }, {
-                    name: '网点分布'
+                    name: '网点分布',
+                    query: 'wdfb'
                 }]
             }, {
                 name: '新闻动态',
+                query: 'xwdt',
                 child: [{
-                    name: '总部公告'
+                    name: '总部公告',
+                    query: 'zbgg'
                 }, {
-                    name: '媒体报道'
+                    name: '媒体报道',
+                    query: 'mtbd'
                 }, {
-                    name: '加盟动态'
+                    name: '加盟动态',
+                    query: 'jmdt'
                 }]
             }, {
                 name: '要闻快递',
+                query: 'ywkd',
                 child: [{
-                    name: '形象宣传'
+                    name: '形象宣传',
+                    query: 'xxxc'
                 }, {
-                    name: '联系我们'
+                    name: '联系我们',
+                    query: 'lxwm'
                 }]
             }, {
-                name: '关于我们'
+                name: '关于我们',
+                query: 'gywm'
             }],
             // 连锁运营体系
             subNav: [{
                 name: '体验式加盟',
+                query: 'tysjm',
                 child: [{
-                    name: '模式解读'
+                    name: '模式解读',
+                    query: 'msjd'
                 }, {
-                    name: '核心优势'
+                    name: '核心优势',
+                    query: 'hxys'
                 }, {
-                    name: '体验实例'
+                    name: '体验实例',
+                    query: 'tysl'
                 }]
             }, {
                 name: '管家式服务',
+                query: 'gjsfw',
                 child: [{
-                    name: '团队架构'
+                    name: '团队架构',
+                    query: 'tdjg'
                 }, {
-                    name: '服务体系'
+                    name: '服务体系',
+                    query: 'fwtx'
                 }, {
-                    name: '服务风采'
+                    name: '服务风采',
+                    query: 'fwfc'
                 }]
             }, {
                 name: '标准化输出',
+                query: 'bzhsc',
                 child: [{
-                    name: '形象系统'
+                    name: '形象系统',
+                    query: 'xxxt'
                 }, {
-                    name: '业务系统'
+                    name: '业务系统',
+                    query: 'ywxt'
                 }, {
-                    name: '推广系统'
+                    name: '推广系统',
+                    query: 'tgxt'
                 }, {
-                    name: '营销系统'
+                    name: '营销系统',
+                    query: 'yxxt'
                 }]
             }, {
                 name: '规范化管理',
+                query: 'gfhgl',
                 child: [{
-                    name: '自律公约'
+                    name: '自律公约',
+                    query: 'zlgy'
                 }, {
-                    name: '督查行动'
+                    name: '督查行动',
+                    query: 'dcxd'
                 }]
             }, {
                 name: '资源整合圈',
+                query: 'zyzhq',
                 child: [{
-                    name: '信息资源'
+                    name: '信息资源',
+                    query: 'xxzy'
                 }, {
-                    name: '商业资源'
+                    name: '商业资源',
+                    query: 'syzy'
                 }, {
-                    name: '人脉资源'
+                    name: '人脉资源',
+                    query: 'rmzy'
                 }]
             }]
         };
@@ -153,6 +207,18 @@ export default {
         hideNav() {
             if (!this.isHome) {
                 this.showNavs = false;
+            }
+        },
+        openRoute(item) {
+            if (!item.query) {
+                this.$router.push({path: '/'});
+            } else {
+                this.$router.push({
+                    path: `/news-list`,
+                    query: {
+                        nav: `${item.query}`
+                    }
+                });
             }
         }
     },
