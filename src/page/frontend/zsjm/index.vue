@@ -1,5 +1,5 @@
 <template>
-   <div class="jmlc">
+   <div class="zsjm">
        <header-nav :isHome="false"></header-nav>
        <div class="container">
            <div class="container-box">
@@ -17,7 +17,7 @@ import Footers from '@/components/footer';
 import BackTop from '@/components/back-top';
 
 export default {
-    name: 'jmlc',
+    name: 'zsjm',
     components: {
         HeaderNav,
         Footers,
@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss">
-.jmlc {
+.zsjm {
     .container {
         background: #edecf1;
         width: 100%;

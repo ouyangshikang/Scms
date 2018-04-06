@@ -3,8 +3,8 @@
        <div class="current-location">
             <span class="location-title">当前位置 :</span>&nbsp;
             <el-breadcrumb separator-class="el-icon-arrow-right">
-                <el-breadcrumb-item :to="{ path: '/zsjm/jmlc' }">招商加盟</el-breadcrumb-item>
-                <el-breadcrumb-item :to="{ path: '/zsjm/jmlc' }">招商流程</el-breadcrumb-item>
+                <el-breadcrumb-item>招商加盟</el-breadcrumb-item>
+                <el-breadcrumb-item>招商流程</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="banner"></div>

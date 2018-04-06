@@ -3,8 +3,8 @@
        <div class="current-location">
             <span class="location-title">当前位置 :</span>&nbsp;
             <el-breadcrumb separator-class="el-icon-arrow-right">
-                <el-breadcrumb-item :to="{ path: '/zsjm/jmlc' }">招商加盟</el-breadcrumb-item>
-                <el-breadcrumb-item :to="{ path: '/zsjm/ylfx' }">盈利分析</el-breadcrumb-item>
+                <el-breadcrumb-item>招商加盟</el-breadcrumb-item>
+                <el-breadcrumb-item>盈利分析</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="banner"></div>
@@ -17,7 +17,7 @@
 <script>
 
 export default {
-    name: 'jmlc',
+    name: 'ylfx',
     components: {
 
     },
@@ -36,12 +36,13 @@ export default {
 .ylfx {
     .listview {
         width: 1000px;
-        padding: 94px 100px 0;
+        padding: 94px 100px 0 100px;
         text-align: center;
         img {
             width: 1006px;
             height: 1132px;
             margin-bottom: 84px;
+            border: 1px solid #cccccc;
         }
     }
 }
