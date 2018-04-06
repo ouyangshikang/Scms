@@ -5,7 +5,11 @@
                 <li v-for="item in subNav" :key="item.name">
                     <dl>
                         <dt>{{item.name}}</dt>
-                        <dd v-for="subItem in item.child" :key="subItem.name">
+                        <dd
+                            v-for="subItem in item.child"
+                            :key="subItem.name"
+                            @click.stop="openRoute(subItem)"
+                        >
                             {{subItem.name}}
                         </dd>
                     </dl>
@@ -31,53 +35,81 @@
 export default {
     data() {
         return {
+            // 连锁运营体系
             subNav: [{
                 name: '体验式加盟',
+                route: '/tysjm',
                 child: [{
-                    name: '模式解读'
+                    name: '模式解读',
+                    route: '/tysjm/msjd'
                 }, {
-                    name: '核心优势'
+                    name: '核心优势',
+                    route: '/tysjm/hxys'
                 }, {
-                    name: '体验实例'
+                    name: '体验实例',
+                    route: '/tysjm/tysl'
                 }]
             }, {
                 name: '管家式服务',
+                route: '/gjsfw',
                 child: [{
-                    name: '团队架构'
+                    name: '团队架构',
+                    route: '/gjsfw/tdjg'
                 }, {
-                    name: '服务体系'
+                    name: '服务体系',
+                    route: '/gjsfw/fwtx'
                 }, {
-                    name: '服务风采'
+                    name: '服务风采',
+                    route: '/gjsfw/fwfc'
                 }]
             }, {
                 name: '标准化输出',
+                route: '/bzhsc',
                 child: [{
-                    name: '形象系统'
+                    name: '形象系统',
+                    route: '/bzhsc/xxxt'
                 }, {
-                    name: '业务系统'
+                    name: '业务系统',
+                    route: '/bzhsc/ywxt'
                 }, {
-                    name: '推广系统'
+                    name: '推广系统',
+                    route: '/bzhsc/tgxt'
                 }, {
-                    name: '营销系统'
+                    name: '营销系统',
+                    route: '/bzhsc/yxxt'
                 }]
             }, {
                 name: '规范化管理',
+                route: '/gfhgl',
                 child: [{
-                    name: '自律公约'
+                    name: '自律公约',
+                    route: '/gfhgl/zlgy'
                 }, {
-                    name: '督查行动'
+                    name: '督查行动',
+                    route: '/gfhgl/dcxd'
                 }]
             }, {
                 name: '资源整合圈',
+                route: '/gfhgl/zyzhq',
                 child: [{
-                    name: '信息资源'
+                    name: '信息资源',
+                    route: '/gfhgl/xxzy'
                 }, {
-                    name: '商业资源'
+                    name: '商业资源',
+                    route: '/gfhgl/syzy'
                 }, {
-                    name: '人脉资源'
+                    name: '人脉资源',
+                    route: '/gfhgl/rmzy'
                 }]
             }]
         };
+    },
+    methods: {
+        openRoute(item) {
+            this.$router.push({
+                path: `${item.route}`
+            });
+        }
     }
 };
 </script>
@@ -110,6 +142,10 @@ export default {
                 font-size: 13px;
                 color: #999999;
                 line-height: 30px;
+                cursor: pointer;
+                &:hover {
+                    color: #0079b7;
+                }
             }
         }
     }

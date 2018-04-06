@@ -20,7 +20,6 @@
                         <li
                             v-for="item in subNav"
                             :key="item.name"
-                            @click="openRoute(item)"
                         >
                             <span>{{item.name}}</span>
                             <i class="iconfont icon-arrow-right"></i>
@@ -36,11 +35,13 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-list__horizon" @click="openRoute()">
+                    <span>首页</span>
+                </li>
                 <li
                     v-for="item in navArr"
                     class="nav-list__horizon"
                     :key="item.name"
-                    @click="openRoute(item)"
                 >
                     <span>{{item.name}}</span>
                     <i v-if="item.child" class="iconfont icon-arrow"></i>
@@ -72,128 +73,139 @@ export default {
         return {
             showNavs: true,
             navArr: [{
-                name: '首页'
-            }, {
                 name: '招商加盟',
-                query: 'zslm',
+                route: '/zsjm',
                 child: [{
                     name: '加盟政策',
-                    query: 'jmzc'
+                    route: '/zsjm/jmzc'
                 }, {
                     name: '盈利分析',
-                    query: 'ylfx'
+                    route: '/zsjm/ylfx'
                 }, {
                     name: '加盟流程',
-                    query: 'jmlc'
+                    route: '/zsjm/jmlc'
                 }]
             }, {
                 name: '加盟案例',
-                query: 'jmal',
+                route: '/jmal',
                 child: [{
                     name: '店东访谈',
-                    query: 'ddft'
+                    route: '/jmal/ddft'
                 }, {
                     name: '运作实例',
-                    query: 'yzsl'
+                    route: '/jmal/yzsl'
                 }, {
                     name: '店面风采',
-                    query: 'dmfc'
+                    route: '/jmal/dmfc'
                 }, {
                     name: '网点分布',
-                    query: 'wdfb'
+                    route: '/jmal/wdfb'
                 }]
             }, {
                 name: '新闻动态',
-                query: 'xwdt',
+                route: '/xwdt',
                 child: [{
                     name: '总部公告',
-                    query: 'zbgg'
+                    route: '/xwdt/zbgg'
                 }, {
                     name: '媒体报道',
-                    query: 'mtbd'
+                    route: '/xwdt/mtbd'
                 }, {
                     name: '加盟动态',
-                    query: 'jmdt'
+                    route: '/xwdt/jmdt'
                 }]
             }, {
                 name: '要闻快递',
-                query: 'ywkd',
+                route: '/ywkd',
                 child: [{
                     name: '形象宣传',
-                    query: 'xxxc'
+                    route: '/ywkd/xxxc'
                 }, {
                     name: '联系我们',
-                    query: 'lxwm'
+                    route: '/ywkd/lxwm'
                 }]
             }, {
                 name: '关于我们',
-                query: 'gywm'
+                route: '/gywm',
+                child: [{
+                    name: '公司介绍',
+                    route: '/gywm/gsjs'
+                }, {
+                    name: '专业团队',
+                    route: '/gywm/zytd'
+                }, {
+                    name: '资质荣誉',
+                    route: '/gywm/zzry'
+                }, {
+                    name: '办公环境',
+                    route: '/gywm/bghj'
+                }]
             }],
             // 连锁运营体系
             subNav: [{
                 name: '体验式加盟',
-                query: 'tysjm',
+                route: '/tysjm',
                 child: [{
                     name: '模式解读',
-                    query: 'msjd'
+                    route: '/tysjm/msjd'
                 }, {
                     name: '核心优势',
-                    query: 'hxys'
+                    route: '/tysjm/hxys'
                 }, {
                     name: '体验实例',
-                    query: 'tysl'
+                    route: '/tysjm/tysl'
                 }]
             }, {
                 name: '管家式服务',
-                query: 'gjsfw',
+                route: '/gjsfw',
                 child: [{
                     name: '团队架构',
-                    query: 'tdjg'
+                    route: '/gjsfw/tdjg'
                 }, {
                     name: '服务体系',
-                    query: 'fwtx'
+                    route: '/gjsfw/fwtx'
                 }, {
                     name: '服务风采',
-                    query: 'fwfc'
+                    route: '/gjsfw/fwfc'
                 }]
             }, {
                 name: '标准化输出',
-                query: 'bzhsc',
+                route: '/bzhsc',
                 child: [{
                     name: '形象系统',
-                    query: 'xxxt'
+                    route: '/bzhsc/xxxt'
                 }, {
                     name: '业务系统',
-                    query: 'ywxt'
+                    route: '/bzhsc/ywxt'
                 }, {
                     name: '推广系统',
-                    query: 'tgxt'
+                    route: '/bzhsc/tgxt'
                 }, {
                     name: '营销系统',
-                    query: 'yxxt'
+                    route: '/bzhsc/yxxt'
                 }]
             }, {
                 name: '规范化管理',
-                query: 'gfhgl',
+                route: '/gfhgl',
                 child: [{
                     name: '自律公约',
-                    query: 'zlgy'
+                    route: '/gfhgl/zlgy'
                 }, {
                     name: '督查行动',
-                    query: 'dcxd'
+                    route: '/gfhgl/dcxd'
                 }]
             }, {
                 name: '资源整合圈',
-                query: 'zyzhq',
+                route: '/gfhgl/zyzhq',
                 child: [{
                     name: '信息资源',
-                    query: 'xxzy'
+                    route: '/gfhgl/xxzy'
                 }, {
                     name: '商业资源',
-                    query: 'syzy'
+                    route: '/gfhgl/syzy'
                 }, {
                     name: '人脉资源',
-                    query: 'rmzy'
+                    route: '/gfhgl/rmzy'
                 }]
             }]
         };
@@ -210,17 +222,15 @@ export default {
             }
         },
         openRoute(item) {
-            if (!item.query) {
+            if (!item) {
                 this.$router.push({path: '/'});
             } else {
                 this.$router.push({
-                    path: `/news-list`,
-                    query: {
-                        nav: `${item.query}`
-                    }
+                    path: `${item.route}`
                 });
             }
         }
+
     },
     mounted() {
         this.showNavs = this.isHome;
