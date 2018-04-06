@@ -3,9 +3,9 @@
         <div class="pannel-list" v-for="item in pannelList" :key="item.title">
             <div class="pannel-header">
                 <span>{{item.subTitle}}</span>
-                <a href="#" v-if="item.isCase">更多</a>
+                <a @click.stop="openRoute(item)" v-if="item.isCase">更多</a>
             </div>
-            <div class="pannel-content">
+            <div class="pannel-content" @click.stop="openRoute(item)">
                 <img :src="item.url" v-if="!item.styleImage">
                 <el-carousel trigger="click" height="338px" arrow="always" v-else>
                     <el-carousel-item v-for="img in item.styleImage" :key="img.url">
@@ -27,6 +27,17 @@ export default {
     props: {
         pannelList: {
             type: Array
+        }
+    },
+    methods: {
+        openRoute(item) {
+            if (!item) {
+                this.$router.push({path: '/'});
+            } else {
+                this.$router.push({
+                    path: `${item.route}`
+                });
+            }
         }
     }
 };
@@ -58,6 +69,7 @@ export default {
                 color: #0079b7;
                 text-decoration: none;
                 margin-right: 22px;
+                cursor: pointer;
             }
         }
         .pannel-content {

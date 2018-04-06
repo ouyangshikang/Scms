@@ -196,16 +196,16 @@ export default {
                 }]
             }, {
                 name: '资源整合圈',
-                route: '/gfhgl/zyzhq',
+                route: '/zyzhq/zyzhq',
                 child: [{
                     name: '信息资源',
-                    route: '/gfhgl/xxzy'
+                    route: '/zyzhq/xxzy'
                 }, {
                     name: '商业资源',
-                    route: '/gfhgl/syzy'
+                    route: '/zyzhq/syzy'
                 }, {
                     name: '人脉资源',
-                    route: '/gfhgl/rmzy'
+                    route: '/zyzhq/rmzy'
                 }]
             }]
         };

@@ -36,10 +36,10 @@
             <card :cardList="cardList"></card>
 
             <!-- 标准化输出 -->
-            <pannel-model :pannelList="pannelList"></pannel-model>
             <!-- 中联风采 -->
-
             <!-- 加盟案例 -->
+            <pannel-model :pannelList="pannelList"></pannel-model>
+
             <back-top></back-top>
         </div>
         <!-- footer -->
@@ -142,18 +142,22 @@ export default {
                 subPannel: [{
                     subTitle: '形象系统',
                     isCase: false,
+                    route: '/bzhsc/xxxt',
                     url: require('../../assets/img/xxxt.png')
                 }, {
                     subTitle: '业务系统',
                     isCase: false,
+                    route: '/bzhsc/ywxt',
                     url: require('../../assets/img/ywxt.png')
                 }, {
                     subTitle: '推广系统',
                     isCase: false,
+                    route: '/bzhsc/tgxt',
                     url: require('../../assets/img/tgxt.png')
                 }, {
                     subTitle: '营销系统',
                     isCase: false,
+                    route: '/bzhsc/yxxt',
                     url: require('../../assets/img/yxxt.png')
                 }]
 
@@ -163,6 +167,7 @@ export default {
                 subPannel: [{
                     subTitle: '办公环境',
                     isCase: false,
+                    route: '/gywm/bghj',
                     styleImage: [{
                         url: require('../../assets/img/bghj.png')
                     }, {
@@ -171,6 +176,7 @@ export default {
                 }, {
                     subTitle: '店面风采',
                     isCase: false,
+                    route: '/jmal/dmfc',
                     styleImage: [{
                         url: require('../../assets/img/dmfc.png')
                     }, {
@@ -183,10 +189,12 @@ export default {
                 subPannel: [{
                     subTitle: '网点分布',
                     isCase: true,
+                    route: '/jmal/wdfb',
                     url: require('../../assets/img/wdfb.png')
                 }, {
                     subTitle: '运作实例',
                     isCase: true,
+                    route: '/jmal/yzsl',
                     url: require('../../assets/img/yzsl.png')
                 }]
             }]
