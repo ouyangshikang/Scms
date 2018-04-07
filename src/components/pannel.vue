@@ -75,6 +75,10 @@ export default {
         .pannel-content {
             cursor: pointer;
             padding: 0 17px;
+            img {
+                width: 558px;
+                height: 338px;
+            }
             .el-carousel {
                 img {
                     width: 558px;
