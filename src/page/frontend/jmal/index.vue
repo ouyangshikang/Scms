@@ -1,9 +1,9 @@
 <template>
-   <div class="news-list">
+   <div class="jmal">
        <header-nav :isHome="false"></header-nav>
        <div class="container">
            <div class="container-box">
-               <router-view />
+               <router-view/>
            </div>
            <back-top></back-top>
        </div>
@@ -17,7 +17,7 @@ import Footers from '@/components/footer';
 import BackTop from '@/components/back-top';
 
 export default {
-    name: 'news-list',
+    name: 'jmal',
     components: {
         HeaderNav,
         Footers,
@@ -27,12 +27,15 @@ export default {
         return {
 
         };
+    },
+    methods: {
+
     }
 };
 </script>
 
 <style lang="scss">
-.news-list {
+.jmal {
     .container {
         background: #edecf1;
         width: 100%;
@@ -57,45 +60,12 @@ export default {
                     }
                 }
             }
-            .banner {
-                width: 1200px;
-                height: 380px;
-                background: url('../../../assets/img/banner.png') no-repeat;
-                background-size: cover;
-            }
             .listview {
-                width: 1080px;
-                max-height: 849px;
+                // width: 1080px;
+                // max-height: 849px;
                 background: #ffffff;
                 margin-top: 24px;
-                padding: 25px 60px;
-                .list-item {
-                    display: flex;
-                    justify-content: space-between;
-                    line-height: 50px;
-                    border-bottom: 1px solid #efeff3;
-                    a, span {
-                        font-size: 14px;
-                        color: #666666;
-                        letter-spacing: .8px;
-                    }
-                    a {
-                        text-decoration: none;
-                        cursor: pointer;
-                        &:hover {
-                            color: #0079b7;
-                            text-decoration: underline;
-                        }
-                    }
-                }
-                .el-pagination {
-                    margin-top: 35px;
-                    text-align: center;
-                    .el-pager li, i{
-                        font-size: 16px;
-                        font-weight: bold;
-                    }
-                }
+                // padding: 25px 60px;
             }
         }
 

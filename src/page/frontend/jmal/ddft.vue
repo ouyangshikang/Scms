@@ -136,6 +136,45 @@ export default {
 
 <style lang="scss">
 .ddft {
-
+    .banner {
+        width: 1200px;
+        height: 380px;
+        background: url('../../../assets/img/banner.png') no-repeat;
+        background-size: cover;
+    }
+    .listview {
+        width: 1080px;
+        max-height: 849px;
+        background: #ffffff;
+        margin-top: 24px;
+        padding: 25px 60px;
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            line-height: 50px;
+            border-bottom: 1px solid #efeff3;
+            a, span {
+                font-size: 14px;
+                color: #666666;
+                letter-spacing: .8px;
+            }
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                &:hover {
+                    color: #0079b7;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .el-pagination {
+            margin-top: 35px;
+            text-align: center;
+            .el-pager li, i{
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
 }
 </style>
