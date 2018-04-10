@@ -1,6 +1,11 @@
 <template>
     <div class="card">
-        <div class="card-list" v-for="card in cardList" :key="card.title">
+        <div
+            class="card-list"
+            v-for="card in cardList"
+            :key="card.title"
+            @click="openRoute(card)"
+        >
             <img :src="card.url">
             <div class="card-info">
                 <p class="card-title">{{card.title}}</p>
@@ -20,6 +25,17 @@ export default {
     props: {
         cardList: {
             type: Array
+        }
+    },
+    methods: {
+        openRoute(item) {
+            if (!item) {
+                this.$router.push({path: '/'});
+            } else {
+                this.$router.push({
+                    path: `${item.route}`
+                });
+            }
         }
     }
 };

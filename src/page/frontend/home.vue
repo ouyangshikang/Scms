@@ -121,19 +121,23 @@ export default {
             cardList: [{
                 url: require('../../assets/img/card1.png'),
                 title: '加盟实例',
-                desc: '优势创造 专注目标'
+                desc: '优势创造 专注目标',
+                route: '/jmal/yzsl'
             }, {
                 url: require('../../assets/img/card2.png'),
                 title: '资源整合',
-                desc: '广阔视野 统筹全局'
+                desc: '广阔视野 统筹全局',
+                route: '/zyzhq/rmzy'
             }, {
                 url: require('../../assets/img/card3.png'),
                 title: '资质荣誉',
-                desc: '载誉累累 信赖认可'
+                desc: '载誉累累 信赖认可',
+                route: '/gywm/zzry'
             }, {
                 url: require('../../assets/img/card4.png'),
                 title: '团队介绍',
-                desc: '携手共进 团队一心'
+                desc: '携手共进 团队一心',
+                route: '/gywm/zytd'
             }],
             // pannel info
             pannelList: [{
