@@ -22,7 +22,7 @@
                 <p>
                     <span>全国统一加盟热线：</span><br>
                     <span class="bigBlue">400-845-7775</span><br>
-                    <span>地址：北京市丰台区总部基地外环路26号院66号楼</span><br>
+                    <span>地址：北京市朝阳区呼家楼街道光华路9号SOHO²</span><br>
                     <span>E-mail：info@zhonglianzhirui.com</span><br>
                     <span>京ICP备：17044859号-1</span>
                 </p>
