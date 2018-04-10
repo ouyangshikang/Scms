@@ -91,16 +91,18 @@ export default {
             }, {
                 name: '资源整合圈',
                 route: '/zyzhq',
-                child: [{
-                    name: '信息资源',
-                    route: '/zyzhq/xxzy'
-                }, {
-                    name: '商业资源',
-                    route: '/zyzhq/syzy'
-                }, {
-                    name: '人脉资源',
-                    route: '/zyzhq/rmzy'
-                }]
+                child: [
+                    // {
+                    //     name: '信息资源',
+                    //     route: '/zyzhq/xxzy'
+                    // }, {
+                    //     name: '商业资源',
+                    //     route: '/zyzhq/syzy'
+                    // },
+                    {
+                        name: '人脉资源',
+                        route: '/zyzhq/rmzy'
+                    }]
             }]
         };
     },

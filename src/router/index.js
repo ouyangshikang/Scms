@@ -23,13 +23,14 @@ import zbgg from 'frontend/xwdt/zbgg';
 // 要闻快递
 import ywkd from 'frontend/ywkd/index';
 import xxxc from 'frontend/ywkd/xxxc';
-import contact from 'frontend/ywkd/contact';
 // 关于我们
 import gywm from 'frontend/gywm/index';
 import gsjs from 'frontend/gywm/gsjs';
 import zytd from 'frontend/gywm/zytd';
 import zzry from 'frontend/gywm/zzry';
 import bghj from 'frontend/gywm/bghj';
+import contact from 'frontend/gywm/contact';
+
 // 体验式加盟
 import tysjm from 'frontend/tysjm/index';
 import msjd from 'frontend/tysjm/msjd';
@@ -141,10 +142,6 @@ export default new Router({
                 path: '/ywkd/xxxc',
                 name: '形象宣传',
                 component: xxxc
-            }, {
-                path: '/ywkd/contact',
-                name: '联系我们',
-                component: contact
             }]
         },
         {
@@ -167,6 +164,10 @@ export default new Router({
                 path: '/gywm/bghj',
                 name: '办公环境',
                 component: bghj
+            }, {
+                path: '/gywm/contact',
+                name: '联系我们',
+                component: contact
             }]
         },
         {

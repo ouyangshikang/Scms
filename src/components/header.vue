@@ -88,43 +88,44 @@ export default {
             }, {
                 name: '加盟案例',
                 route: '/jmal',
-                child: [{
-                    name: '店东访谈',
-                    route: '/jmal/ddft'
-                }, {
-                    name: '运作实例',
-                    route: '/jmal/yzsl'
-                }, {
-                    name: '店面风采',
-                    route: '/jmal/dmfc'
-                }, {
-                    name: '网点分布',
-                    route: '/jmal/wdfb'
-                }]
-            }, {
-                name: '新闻动态',
-                route: '/xwdt',
-                child: [{
-                    name: '总部公告',
-                    route: '/xwdt/zbgg'
-                }, {
-                    name: '媒体报道',
-                    route: '/xwdt/mtbd'
-                }, {
-                    name: '加盟动态',
-                    route: '/xwdt/jmdt'
-                }]
-            }, {
-                name: '要闻快递',
-                route: '/ywkd',
-                child: [{
-                    name: '形象宣传',
-                    route: '/ywkd/xxxc'
-                }, {
-                    name: '联系我们',
-                    route: '/ywkd/contact'
-                }]
-            }, {
+                child: [
+                    // {
+                    //     name: '店东访谈',
+                    //     route: '/jmal/ddft'
+                    // },
+                    {
+                        name: '运作实例',
+                        route: '/jmal/yzsl'
+                    }, {
+                        name: '店面风采',
+                        route: '/jmal/dmfc'
+                    }, {
+                        name: '网点分布',
+                        route: '/jmal/wdfb'
+                    }]
+            },
+            // {
+            //     name: '新闻动态',
+            //     route: '/xwdt',
+            //     child: [{
+            //         name: '总部公告',
+            //         route: '/xwdt/zbgg'
+            //     }, {
+            //         name: '媒体报道',
+            //         route: '/xwdt/mtbd'
+            //     }, {
+            //         name: '加盟动态',
+            //         route: '/xwdt/jmdt'
+            //     }]
+            // }, {
+            //     name: '要闻快递',
+            //     route: '/ywkd',
+            //     child: [{
+            //         name: '形象宣传',
+            //         route: '/ywkd/xxxc'
+            //     }]
+            // },
+            {
                 name: '关于我们',
                 route: '/gywm',
                 child: [{
@@ -139,6 +140,9 @@ export default {
                 }, {
                     name: '办公环境',
                     route: '/gywm/bghj'
+                }, {
+                    name: '联系我们',
+                    route: '/gywm/contact'
                 }]
             }],
             // 连锁运营体系
@@ -197,16 +201,18 @@ export default {
             }, {
                 name: '资源整合圈',
                 route: '/zyzhq/zyzhq',
-                child: [{
-                    name: '信息资源',
-                    route: '/zyzhq/xxzy'
-                }, {
-                    name: '商业资源',
-                    route: '/zyzhq/syzy'
-                }, {
-                    name: '人脉资源',
-                    route: '/zyzhq/rmzy'
-                }]
+                child: [
+                    // {
+                    //     name: '信息资源',
+                    //     route: '/zyzhq/xxzy'
+                    // }, {
+                    //     name: '商业资源',
+                    //     route: '/zyzhq/syzy'
+                    // },
+                    {
+                        name: '人脉资源',
+                        route: '/zyzhq/rmzy'
+                    }]
             }]
         };
     },
@@ -331,13 +337,15 @@ export default {
                 }
                 &__horizon {
                     // background: #f5f5fa;
-                    width: 162px;
+                    // width: 162px;
+                    flex-basis: 162px;
+                    flex-grow: 1;
                     &-hover {
                         display: none;
                         position: absolute;
                         top: 60px;
-                        width: 162px;
-                        background: rgba(255, 255, 255, 0.8);
+                        width: 100%;
+                        background: rgba(255, 255, 255, 0.85);
                         z-index: 99;
                         li {
                             padding: 20px 40px;
