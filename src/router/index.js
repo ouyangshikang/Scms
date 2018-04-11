@@ -5,57 +5,68 @@ import NewsList from 'frontend/news-list';
 import NewsDetail from 'frontend/news-detail';
 
 // 招商加盟
-import zsjm from 'frontend/zsjm/index';
-import jmlc from 'frontend/zsjm/jmlc';
-import jmzc from 'frontend/zsjm/jmzc';
-import ylfx from 'frontend/zsjm/ylfx';
+const zsjm = () => import('frontend/zsjm/index');
+const jmlc = () => import('frontend/zsjm/jmlc');
+const jmzc = () => import('frontend/zsjm/jmzc');
+const ylfx = () => import('frontend/zsjm/ylfx');
+
 // 加盟案例
-import jmal from 'frontend/jmal/index';
-import ddft from 'frontend/jmal/ddft';
-import dmfc from 'frontend/jmal/dmfc';
-import yzsl from 'frontend/jmal/yzsl';
-import wdfb from 'frontend/jmal/wdfb';
+const jmal = () => import('frontend/jmal/index');
+const ddft = () => import('frontend/jmal/ddft');
+const dmfc = () => import('frontend/jmal/dmfc');
+const yzsl = () => import('frontend/jmal/yzsl');
+const wdfb = () => import('frontend/jmal/wdfb');
+
 // 新闻动态
-import xwdt from 'frontend/xwdt/index';
-import jmdt from 'frontend/xwdt/jmdt';
-import mtbd from 'frontend/xwdt/mtbd';
-import zbgg from 'frontend/xwdt/zbgg';
+const xwdt = () => import('frontend/xwdt/index');
+const jmdt = () => import('frontend/xwdt/jmdt');
+const mtbd = () => import('frontend/xwdt/mtbd');
+const zbgg = () => import('frontend/xwdt/zbgg');
+
 // 要闻快递
-import ywkd from 'frontend/ywkd/index';
-import xxxc from 'frontend/ywkd/xxxc';
+const ywkd = () => import('frontend/ywkd/index');
+const xxxc = () => import('frontend/ywkd/xxxc');
+
 // 关于我们
-import gywm from 'frontend/gywm/index';
-import gsjs from 'frontend/gywm/gsjs';
-import zytd from 'frontend/gywm/zytd';
-import zzry from 'frontend/gywm/zzry';
-import bghj from 'frontend/gywm/bghj';
-import contact from 'frontend/gywm/contact';
+const gywm = () => import('frontend/gywm/index');
+const gsjs = () => import('frontend/gywm/gsjs');
+const zytd = () => import('frontend/gywm/zytd');
+const zzry = () => import('frontend/gywm/zzry');
+const bghj = () => import('frontend/gywm/bghj');
+const contact = () => import('frontend/gywm/contact');
 
 // 体验式加盟
-import tysjm from 'frontend/tysjm/index';
-import msjd from 'frontend/tysjm/msjd';
-import hxys from 'frontend/tysjm/hxys';
-import tysl from 'frontend/tysjm/tysl';
+const tysjm = () => import('frontend/tysjm/index');
+const msjd = () => import('frontend/tysjm/msjd');
+const hxys = () => import('frontend/tysjm/hxys');
+const tysl = () => import('frontend/tysjm/tysl');
+
 // 管家式服务
-import gjsfw from 'frontend/gjsfw/index';
-import tdjg from 'frontend/gjsfw/tdjg';
-import fwtx from 'frontend/gjsfw/fwtx';
-import fwfc from 'frontend/gjsfw/fwfc';
+const gjsfw = () => import('frontend/gjsfw/index');
+const tdjg = () => import('frontend/gjsfw/tdjg');
+const fwtx = () => import('frontend/gjsfw/fwtx');
+const fwfc = () => import('frontend/gjsfw/fwfc');
+
 // 标准化输出
-import bzhsc from 'frontend/bzhsc/index';
-import xxxt from 'frontend/bzhsc/xxxt';
-import ywxt from 'frontend/bzhsc/ywxt';
-import yxxt from 'frontend/bzhsc/yxxt';
-import tgxt from 'frontend/bzhsc/tgxt';
+const bzhsc = () => import('frontend/bzhsc/index');
+const xxxt = () => import('frontend/bzhsc/xxxt');
+const ywxt = () => import('frontend/bzhsc/ywxt');
+const yxxt = () => import('frontend/bzhsc/yxxt');
+const tgxt = () => import('frontend/bzhsc/tgxt');
+
 // 规范化管理
-import gfhgl from 'frontend/gfhgl/index';
-import zlgy from 'frontend/gfhgl/zlgy';
-import dcxd from 'frontend/gfhgl/dcxd';
+const gfhgl = () => import('frontend/gfhgl/index');
+const zlgy = () => import('frontend/gfhgl/zlgy');
+const dcxd = () => import('frontend/gfhgl/dcxd');
+
 // 资源整合圈
-import zyzhq from 'frontend/zyzhq/index';
-import xxzy from 'frontend/zyzhq/xxzy';
-import syzy from 'frontend/zyzhq/syzy';
-import rmzy from 'frontend/zyzhq/rmzy';
+const zyzhq = () => import('frontend/zyzhq/index');
+const xxzy = () => import('frontend/zyzhq/xxzy');
+const syzy = () => import('frontend/zyzhq/syzy');
+const rmzy = () => import('frontend/zyzhq/rmzy');
+
+// 后台管理界面
+const login = () => import('backend/login');
 
 Vue.use(Router);
 
@@ -259,6 +270,11 @@ export default new Router({
                 name: '人脉资源',
                 component: rmzy
             }]
+        },
+        {
+            path: '/manage/login',
+            name: '登录',
+            component: login
         }
     ]
 });
