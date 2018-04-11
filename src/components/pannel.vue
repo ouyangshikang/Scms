@@ -53,9 +53,9 @@ export default {
         margin-top: 16px;
         display: inline-block;
         background: #ffffff;
-        transition: all ease .5s;
+        transition: all .5s ease;
         &:hover {
-            box-shadow: 0 0 30px 1px #3378b2;
+            box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
             transform: translateY(-5px);
         }
         .pannel-header {

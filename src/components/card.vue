@@ -58,7 +58,7 @@ export default {
             cursor: pointer;
             transition: all ease .3s;
             &:hover {
-                box-shadow: 0 0 20px 0px #409eff;
+                box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.3);
                 transform: translateY(-3px);
             }
             .card-info {
