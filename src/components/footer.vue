@@ -52,16 +52,18 @@ export default {
             }, {
                 name: '管家式服务',
                 route: '/gjsfw',
-                child: [{
-                    name: '团队架构',
-                    route: '/gjsfw/tdjg'
-                }, {
-                    name: '服务体系',
-                    route: '/gjsfw/fwtx'
-                }, {
-                    name: '服务风采',
-                    route: '/gjsfw/fwfc'
-                }]
+                child: [
+                    // {
+                    //     name: '团队架构',
+                    //     route: '/gjsfw/tdjg'
+                    // },
+                    {
+                        name: '服务体系',
+                        route: '/gjsfw/fwtx'
+                    }, {
+                        name: '服务风采',
+                        route: '/gjsfw/fwfc'
+                    }]
             }, {
                 name: '标准化输出',
                 route: '/bzhsc',

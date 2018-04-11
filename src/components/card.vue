@@ -56,6 +56,11 @@ export default {
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            transition: all ease .3s;
+            &:hover {
+                box-shadow: 0 0 20px 0px #409eff;
+                transform: translateY(-3px);
+            }
             .card-info {
                 margin-left: 18px;
                 .card-title {

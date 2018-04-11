@@ -53,6 +53,11 @@ export default {
         margin-top: 16px;
         display: inline-block;
         background: #ffffff;
+        transition: all ease .5s;
+        &:hover {
+            box-shadow: 0 0 30px 1px #3378b2;
+            transform: translateY(-5px);
+        }
         .pannel-header {
             height: 59px;
             border-bottom: 1px solid #efeff3;
